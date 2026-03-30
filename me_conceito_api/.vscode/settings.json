@@ -1,0 +1,16 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "/^c:/Users/washi/Desktop/Site/Me_Conceito/me_conceito_api/\\.venv/Scripts/python\\.exe manage\\.py migrate$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^cd c:\\\\Users\\\\washi\\\\Desktop\\\\Site\\\\Me_Conceito\\\\me_Conceito\\\\me_conceito_api ; \\.venv\\\\Scripts\\\\python\\.exe manage\\.py makemigrations api$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^& \\.venv\\\\Scripts\\\\python\\.exe -c 'import os; os\\.environ\\[\"DJANGO_SETTINGS_MODULE\"\\]=\"backend\\.settings\"; import django; django\\.setup\\(\\); from backend import settings; from api\\.models import CardNovidade; from api\\.serializers import CardNovidadeSerializer; field = CardNovidade\\._meta\\.get_field\\(\"imagem\"\\); serializer_field = CardNovidadeSerializer\\(\\)\\.fields\\[\"imagem\"\\]; print\\(\"MEDIA_URL=\", settings\\.MEDIA_URL\\); print\\(\"MEDIA_ROOT=\", settings\\.MEDIA_ROOT\\); print\\(\"CardNovidade\\.imagem=\", type\\(field\\)\\.__name__, \"upload_to=\", getattr\\(field,\"upload_to\",None\\), \"blank=\", field\\.blank, \"null=\", field\\.null\\); print\\(\"Serializer imagem=\", type\\(serializer_field\\)\\.__name__, \"use_url=\", getattr\\(serializer_field,\"use_url\",None\\), \"read_only=\", serializer_field\\.read_only\\)'$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
+}

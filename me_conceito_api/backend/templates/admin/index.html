@@ -1,0 +1,62 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+  <div class="dashboard-welcome">
+    <h2>Bem-vinda ao painel da loja!</h2>
+    <p>Aqui você pode criar, editar e organizar categorias e produtos com facilidade.</p>
+  </div>
+
+  <div class="dashboard-metrics">
+    <div class="metric-card">
+      <span>Usuários</span>
+      <strong>{{ total_users }}</strong>
+      <p>Contas totais cadastradas</p>
+    </div>
+    <div class="metric-card">
+      <span>Novos este mês</span>
+      <strong>{{ new_users_this_month }}</strong>
+      <p>Contas criadas no mês atual</p>
+    </div>
+    <div class="metric-card">
+      <span>Visitas este mês</span>
+      <strong>{{ visits_this_month }}</strong>
+      <p>Registros de visitas no site</p>
+    </div>
+    <div class="metric-card">
+      <span>Visitas totais</span>
+      <strong>{{ total_visits }}</strong>
+      <p>Visitas registradas desde o início</p>
+    </div>
+  </div>
+
+  <div class="dashboard-section">
+    <div class="section-header">
+      <div>
+        <h3>Controle de usuários</h3>
+        <p>Gerencie facilmente as contas da sua equipe e clientes.</p>
+      </div>
+    </div>
+    <div class="dashboard-boxes">
+      <div class="dashboard-box">
+        <strong>Novos usuários</strong>
+        <small>Veja a lista completa de contas criadas este mês.</small>
+      </div>
+      <div class="dashboard-box">
+        <strong>Administração</strong>
+        <small>Adicione novos administradores e controle permissões.</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="quick-actions">
+    <a href="{% url 'admin:auth_user_changelist' %}">Ver Usuários</a>
+    <a href="{% url 'admin:auth_user_add' %}">Adicionar Usuário</a>
+    <a href="{% url 'admin:auth_group_changelist' %}">Grupos & Permissões</a>
+    <a href="{% url 'admin:api_product_changelist' %}">Produtos</a>
+    <a href="{% url 'admin:api_category_changelist' %}">Categorias</a>
+    <a href="{% url 'admin:api_sitevisit_changelist' %}">Visitas</a>
+  </div>
+
+  {{ block.super }}
+{% endblock %}

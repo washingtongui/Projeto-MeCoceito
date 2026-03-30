@@ -1,0 +1,123 @@
+{% extends "admin/base.html" %}
+{% load i18n static %}
+
+{% block title %}Me Conceito | Admin{% endblock %}
+
+{% block branding %}
+  <div class="site-branding">
+    <h1 id="site-name"><a href="/admin/">Me Conceito</a></h1>
+    <p class="site-description">Painel profissional, fácil e seguro para gerenciar loja, usuários e métricas.</p>
+  </div>
+{% endblock %}
+
+{% block extrahead %}
+  {{ block.super }}
+  <style>
+    .site-branding h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      letter-spacing: 0.06em;
+    }
+    .site-branding .site-description {
+      margin: 0.2rem 0 0;
+      color: #6b6b6b;
+      font-size: 1rem;
+    }
+    .module h2 {
+      color: #1f1f1f;
+    }
+    .dashboard-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .metric-card {
+      padding: 1.4rem;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid #e2dcd3;
+      box-shadow: 0 18px 40px rgba(35, 31, 26, 0.05);
+    }
+    .metric-card span {
+      display: block;
+      color: #6b6b6b;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+    }
+    .metric-card strong {
+      display: block;
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+      color: #231f1a;
+    }
+    .metric-card p {
+      margin: 0;
+      color: #5c5550;
+      font-size: 0.95rem;
+    }
+    .dashboard-welcome {
+      margin-bottom: 1.5rem;
+      padding: 1.4rem 1.6rem;
+      border-radius: 16px;
+      background: #f4f0eb;
+      border: 1px solid #e0d7cb;
+    }
+    .dashboard-section {
+      margin-bottom: 1.8rem;
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1rem;
+      gap: 1rem;
+    }
+    .section-header h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #1f1f1f;
+    }
+    .section-header p {
+      margin: 0;
+      color: #6b6b6b;
+      font-size: 0.95rem;
+    }
+    .dashboard-boxes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .dashboard-box {
+      padding: 1.25rem;
+      background: #ffffff;
+      border: 1px solid #e4ddd2;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(35, 31, 26, 0.05);
+    }
+    .dashboard-box strong {
+      display: block;
+      font-size: 1.9rem;
+      margin-bottom: 0.5rem;
+      color: #231f1a;
+    }
+    .dashboard-box small {
+      color: #6b6b6b;
+    }
+    .quick-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      padding: 0.85rem 1.4rem;
+      border-radius: 999px;
+      background: #231f1a;
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  </style>
+{% endblock %}
