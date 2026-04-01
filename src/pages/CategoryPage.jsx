@@ -44,7 +44,7 @@ function CategoryPage({ pageSlug, pageTitle }) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ path: `/${pageSlug}${sectionSlug ? `/${sectionSlug}` : ''}` }),
-    }).catch(() => {})
+    }).catch(() => { })
   }, [pageSlug, sectionSlug])
 
   if (loading) {
@@ -82,15 +82,15 @@ function CategoryPage({ pageSlug, pageTitle }) {
 
   const uncategorizedSection = category.uncategorized_products?.length
     ? [
-        {
-          id: 'uncategorized',
-          name: 'Outras peças',
-          slug: 'sem-secao',
-          description: 'Produtos sem seção definida',
-          order: 999,
-          products: category.uncategorized_products,
-        },
-      ]
+      {
+        id: 'uncategorized',
+        name: 'Outras peças',
+        slug: 'sem-secao',
+        description: 'Produtos sem seção definida',
+        order: 999,
+        products: category.uncategorized_products,
+      },
+    ]
     : []
 
   const allSections = [...category.sections, ...uncategorizedSection]
